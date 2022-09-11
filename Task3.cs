@@ -14,7 +14,7 @@ namespace Task3
          * f(x) = 	1,	если x принадлежит [0, 1), [2, 3), …,
                    −1,	если x принадлежит [1, 2), [3, 4), … .
          */
-        internal static double F(double x) => x > 0 ? Math.Floor(x) % 2 == 0 ? 1 : -1 : 0;
+        internal static double F(double x) => x >= 0 ? Math.Floor(x) % 2 == 0 ? 1 : -1 : 0;
 
         /*
          * Задание 3.2. Дан номер года (положительное целое число). Определить количество дней в этом году,
