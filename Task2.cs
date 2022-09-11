@@ -15,9 +15,9 @@ namespace Task2
         internal static int Min3(int a, int b, int c)
         {
             int var = a;
-            if (var > b)
+            if (var >= b)
                 var = b;
-            if (var > c)
+            if (var >= c)
                 var = c;
             return var;
         }
@@ -27,7 +27,7 @@ namespace Task2
          * Функция должна иметь вид одного выражения (https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/statements-expressions-operators/expression-bodied-members#methods).
          * Использование функций стандартной библиотеки в решении не допускается.
          */
-        internal static int Max3(int a, int b, int c) => a > b ? a > c ? a : c : b > c ? b : c;
+        internal static int Max3(int a, int b, int c) => a >= b ? a >= c ? a : c : b >= c ? b : c;
 
         /*
  * Задание 2.3. Дано значение угла α (типа Double) в градусах. Определите значение этого же угла в радианах,
@@ -43,8 +43,8 @@ namespace Task2
 
         public static void Main(string[] args)
         {
-            Console.WriteLine(Min3(2, 0, 3));
-            Console.WriteLine(Max3(2, 0, 3));
+            Console.WriteLine(Min3(-1, 0, 3));
+            Console.WriteLine(Max3(0, 0, 0));
             Console.WriteLine(Deg2Rad(180.0));
             Console.WriteLine(Rad2Deg(Math.PI));
         }
